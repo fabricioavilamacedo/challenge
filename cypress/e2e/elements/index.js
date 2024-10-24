@@ -1,4 +1,5 @@
 export const INDEX = {
-    buscar: '#mobileSearch > #menuSearch',
-    search: '#mobileSearch > .roboto-medium'
+    email: '#email',
+    senha: '#password',
+    btnEntrar: 'button[data-testid*="entrar"]'
 }

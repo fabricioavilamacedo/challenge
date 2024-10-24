@@ -1,23 +1,33 @@
 import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
-import produtos from '../pages/apiProdutos'
+import users from '../pages/apiUsuarios'
 
 
-//@buscaProduto
+//@busca
 
-When("enviar uma requisição com um produto valido na Api de busca de produtos", () => {
-    produtos.buscarProdutoValido()
+When("enviar uma requisição com id valido na Api de busca de usuarios", () => {
+    users.buscarId()
   })
 
-Then("terei o status code 200 com o produto listado no response com sucesso", () => {
-    produtos.buscarProdutoValido()
+Then("terei o status code 200 com os dados do usuario exibido no response com sucesso", () => {
+    users.buscarId()
   })
 
 //@buscaInvalida
 
-When("enviar uma requisição com um produto invalido na Api de busca de produtos", () => {
-    produtos.buscarProdutoInvalido()
+When("enviar uma requisição com id invalido na Api de busca de usuarios", () => {
+    users.buscarIdInvalido()
   })
 
-Then("terei o status code 404 com a mensagem de produto não encontrado com sucesso", () => {
-    produtos.buscarProdutoInvalido()
+Then("terei o status code 400 com a mensagem de usuario não encontrado", () => {
+    users.buscarIdInvalido()
+})
+
+//@cadastroInvalido
+
+When("enviar uma requisição com email ja cadastrado na Api de criacao de usuarios", () => {
+  users.criacaoUserInvalido()
+})
+
+Then("terei o status code 400 com a mensagem de este email ja esta sendo usado", () => {
+  users.criacaoUserInvalido()
 })

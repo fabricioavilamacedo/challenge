@@ -3,7 +3,7 @@
 Testes automatizado do desafio de automação API e Web
 ## Instruções
 1. Baixe e instale o Node: [https://nodejs.org/]
-2. Clone o repositório: `git clone git@github.com:fabricioavilamacedo/challenge-keeggo.git` (SSH) or `https://github.com/fabricioavilamacedo/challenge-keeggo.git` (HTTPS)
+2. Clone o repositório: `git clone git@github.com:fabricioavilamacedo/challenge.git` (SSH) or `https://github.com/fabricioavilamacedo/challenge.git` (HTTPS)
 3. No diretório raiz do projeto rodar os comandos `npm install` e `npx cypress open` para abrir o framework
 4. Após a inicialização do Cypress selecionar e rodar de teste desejado que ele já irá executar todos os casos de teste.
 
